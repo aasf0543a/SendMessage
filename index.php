@@ -1,4 +1,4 @@
 <?php
-$post_data = $_POST;
-var_dump($post_data['message']);
+$post_data = $_POST['message'];
+echo $post_data;
 ?>
