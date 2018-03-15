@@ -2,7 +2,6 @@
 $post_data = $_POST;
 //echo $post_data;
 //var_dump($post_data)
-$request = new HttpRequest();
 $request->setUrl('https://send-message.herokuapp.com/index.php');
 $request->setMethod(HTTP_METH_POST);
 
