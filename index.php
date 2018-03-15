@@ -13,9 +13,7 @@ $request->setHeaders(array(
 ));
 
 $request->setContentType('application/x-www-form-urlencoded');
-$request->setPostFields(array(
-  'message' => $post_data
-));
+$request->setPostFields($post_data);
 
 try {
   $response = $request->send();
