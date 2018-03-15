@@ -20,5 +20,4 @@ $request->setPostFields(array(
 try {
   $response = $request->send($post_data);
   echo $response->getBody();
-} 
-?>
+}
