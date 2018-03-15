@@ -10,7 +10,7 @@ echo $post_data
     <title>Document</title>
 </head>
 <body>
-<h1>echo $post_data</h1>
+<h1>$post_data</h1>
 
 <ul>
     <li><a href="start_authorize.php">認証開始</a></li>
