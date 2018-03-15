@@ -18,10 +18,7 @@ $request->setPostFields(array(
 ));
 
 try {
-  $response = $request->send();
-
+  $response = $request->send($post_data);
   echo $response->getBody();
-} catch (HttpException $ex) {
-  echo $ex;
-}
+} 
 ?>
