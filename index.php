@@ -1,4 +1,4 @@
 <?php
 $post_data = $_POST;
-print $_POST['message'];
+echo $post_data;
 ?>
