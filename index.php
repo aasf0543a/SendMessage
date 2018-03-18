@@ -1,8 +1,8 @@
 <?php
 //$post_data = &_GET['manid'];
 //print $post_data;
-//$post_data = file_get_contents("php://input");
-$post_data = $_POST;
+$post_data = file_get_contents("php://input");
+//$post_data = $_POST;
 //var_dump($post_data)
 
 define('LINE_API_URL'  ,"https://notify-api.line.me/api/notify");
