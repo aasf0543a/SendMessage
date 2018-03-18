@@ -8,7 +8,7 @@ echo $post_data;
 
 <?php
 define('LINE_API_URL'  ,"https://notify-api.line.me/api/notify");
-define('LINE_API_TOKEN','トークン');
+define('LINE_API_TOKEN','Zv3KWsygHysC16wv9igBc7JB0UgyU2hpX9sZsDYS9FT');
 
 function post_message($message){
 
