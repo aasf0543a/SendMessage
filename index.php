@@ -1,5 +1,6 @@
 <?php
-$post_data = &_GET['manid'];
+$post_data = "HI";
+//$post_data = &_GET['manid'];
 //print $post_data;
 //$post_data = file_get_contents("php://input");
 //$post_data = $_POST;
