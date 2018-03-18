@@ -3,7 +3,6 @@
 //print $post_data;
 //$post_data = file_get_contents("php://input");
 $post_data = $_POST;
-echo $post_data;
 //var_dump($post_data)
 
 define('LINE_API_URL'  ,"https://notify-api.line.me/api/notify");
@@ -35,7 +34,7 @@ function post_message($message){
 }
 
 
-post_message("HIHIHI");
+post_message($post_data);
 
 
 
