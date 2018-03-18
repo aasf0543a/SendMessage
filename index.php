@@ -1,5 +1,6 @@
 <?php
 $post_data = $_POST;
+print &post_data;
 //echo $post_data;
 //var_dump($post_data)
 $request->setUrl('http://notify-api.line.me/api/notify');
