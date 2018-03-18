@@ -1,6 +1,6 @@
 <?php
 
-$post_data = file_get_contents("php://input")
+$post_data = file_get_contents("php://input");
 //$post_data = $_POST;
 print $post_data;
 //echo $post_data;
