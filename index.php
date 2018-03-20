@@ -30,7 +30,7 @@ function post_message($message){
             'header'=>"Authorization: Bearer " . LINE_API_TOKEN . "\r\n"
                       . "Content-Type: application/x-www-form-urlencoded\r\n"
                       . "Content-Length: ".strlen($data)  . "\r\n" ,
-            'content' => "WTF"
+            'content' => $data
         )
     );
     $context = stream_context_create($options);
