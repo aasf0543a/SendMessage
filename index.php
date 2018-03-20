@@ -39,9 +39,6 @@ function post_message($message){
     return true;
 }
 
-
 post_message($post_data);
-
-
 
 ?>
