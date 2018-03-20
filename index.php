@@ -15,7 +15,7 @@ $mess = $data1[1] . $data1[2] . $data1[3] . $data1[4];
 //$post_manname = $_POST['manname'];
 //$post_mess = $post_char . $post_manname . $post_safety . $post_backwork;
 define('LINE_API_URL'  ,"https://notify-api.line.me/api/notify");
-//define('LINE_API_TOKEN','Zv3KWsygHysC16wv9igBc7JB0UgyU2hpX9sZsDYS9FT');
+define('LINE_API_TOKEN','Zv3KWsygHysC16wv9igBc7JB0UgyU2hpX9sZsDYS9FT');
 
 function post_message($message1){
 
@@ -27,7 +27,7 @@ function post_message($message1){
     $options = array(
         'http'=>array(
             'method'=>'POST',
-            'header'=>"Authorization: Bearer " . $data1[0] . "\r\n"
+            'header'=>"Authorization: Bearer " . LINE_API_TOKEN . "\r\n"
                       . "Content-Type: application/x-www-form-urlencoded\r\n"
                       . "Content-Length: ".strlen($data)  . "\r\n" ,
             'content' => $data
