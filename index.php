@@ -1,11 +1,11 @@
 <?php
-//$post_data = &_GET['manid'];
+$post_data = &_GET['manid'];
 //print $post_data;
-$post_data = file_get_contents("php://input");
+//$post_data = file_get_contents("php://input");
 //$post_data = $_POST;
 //var_dump($post_data);
 //$post_safety = $_POST['safety'];
-$post_token = $_POST['manid'];
+//$post_token = $_POST['manid'];
 //$post_char = $_POST['char'];
 //$post_backwork = $_POST['backwork'];
 //$post_manname = $_POST['manname'];
@@ -24,7 +24,7 @@ function post_message($message){
     $options = array(
         'http'=>array(
             'method'=>'POST',
-            'header'=>"Authorization: Bearer " . $post_token . "\r\n"
+            'header'=>"Authorization: Bearer " . $post_data . "\r\n"
                       . "Content-Type: application/x-www-form-urlencoded\r\n"
                       . "Content-Length: ".strlen($data)  . "\r\n" ,
             'content' => $data
@@ -40,7 +40,7 @@ function post_message($message){
 }
 
 
-post_message($post_token);
+post_message($post_data);
 
 
 
