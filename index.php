@@ -5,7 +5,7 @@ $post_data = file_get_contents("php://input");
 $data1 = array(
     $post_data
     );
-$mess = $data1[1] . $data1[2] . $data1[3] . $data1[4]
+$mess = $data1[1] . $data1[2] . $data1[3] . $data1[4];
 //$post_data = $_POST;
 //var_dump($post_data);
 //$post_safety = $_POST['safety'];
