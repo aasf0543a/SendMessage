@@ -2,10 +2,10 @@
 //$post_data = &_GET['manid'];
 //print $post_data;
 $post_data = file_get_contents("php://input");
-$data1 = array(
-    $post_data
-    );
-$mess = $data1[1] . $data1[2] . $data1[3] . $data1[4];
+//$data1 = array(
+//    $post_data
+//    );
+//$mess = $data1[1] . $data1[2] . $data1[3] . $data1[4];
 //$post_data = $_POST;
 //var_dump($post_data);
 //$post_safety = $_POST['safety'];
@@ -17,10 +17,10 @@ $mess = $data1[1] . $data1[2] . $data1[3] . $data1[4];
 define('LINE_API_URL'  ,"https://notify-api.line.me/api/notify");
 define('LINE_API_TOKEN','Zv3KWsygHysC16wv9igBc7JB0UgyU2hpX9sZsDYS9FT');
 
-function post_message($message1){
+function post_message($message){
 
     $data = array(
-                        "message" => $message1//先將message轉成索引数组
+                        "message" => $message//先將message轉成索引数组
                      );
     $data = http_build_query($data, "", "&");//再將轉成變數=Value&變數=Value
 
@@ -42,6 +42,6 @@ function post_message($message1){
     return true;
 }
 
-post_message($mess);
+post_message($post_data);
 
 ?>
