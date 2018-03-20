@@ -9,7 +9,7 @@ $post_token = post['manid'];
 $post_char = post['char'];
 $post_backwork = post['backwork'];
 $post_manname = post['manname'];
-$post_mess = $post_char . $post_manname/r/n . $post_safety . $post_backwork
+$post_mess = $post_char . $post_manname\r\n . $post_safety . $post_backwork
 
 define('LINE_API_URL'  ,"https://notify-api.line.me/api/notify");
 //define('LINE_API_TOKEN','Zv3KWsygHysC16wv9igBc7JB0UgyU2hpX9sZsDYS9FT');
