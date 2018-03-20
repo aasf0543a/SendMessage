@@ -4,11 +4,11 @@
 //$post_data = file_get_contents("php://input");
 //$post_data = $_POST;
 //var_dump($post_data);
-$post_safety = post['safety'];
-$post_token = post['manid'];
-$post_char = post['char'];
-$post_backwork = post['backwork'];
-$post_manname = post['manname'];
+$post_safety = $_post['safety'];
+$post_token = $_post['manid'];
+$post_char = $_post['char'];
+$post_backwork = $_post['backwork'];
+$post_manname = $_post['manname'];
 $post_mess = $post_char . $post_manname . $post_safety . $post_backwork;
 
 define('LINE_API_URL'  ,"https://notify-api.line.me/api/notify");
