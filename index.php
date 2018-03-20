@@ -1,7 +1,7 @@
 <?php
-$post_data = &_GET['manid'];
+//$post_data = &_GET['manid'];
 //print $post_data;
-//$post_data = file_get_contents("php://input");
+$post_data = file_get_contents("php://input");
 //$post_data = $_POST;
 //var_dump($post_data);
 //$post_safety = $_POST['safety'];
