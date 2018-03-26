@@ -1,4 +1,7 @@
 <?php
+//example,
+//post數據= "username=" & 帳號 & "&password=" & 密碼 & "&qeustions........"
+//url = XXXXXXX?key=value&key=value
 //$post_data = &_GET['manid'];
 //print $post_data;
 $post_data = file_get_contents("php://input");
