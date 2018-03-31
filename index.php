@@ -6,7 +6,7 @@ $post_safety = $_POST['safe'];
 $post_token = $_POST['token'];
 $post_backwork = $_POST['work'];
 $post_manname = $_POST['name'];
-$post_mess = $post_manname . "\r\n" . $post_safety . "\r\n" . $post_backwork;
+$post_mess = "\r\n" . $post_manname . "\r\n" . $post_safety . "\r\n" . $post_backwork;
 define('LINE_API_URL'  ,"https://notify-api.line.me/api/notify");
 //define('LINE_API_TOKEN','Zv3KWsygHysC16wv9igBc7JB0UgyU2hpX9sZsDYS9FT');
 define('API_TOKEN', $post_token);
