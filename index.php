@@ -14,7 +14,7 @@ define('API_TOKEN', $post_token);
 function post_message($message){
 
     //$data = array(
-                        "message" => $message//先將message轉成索引数组
+    //                  "message" => $message//先將message轉成索引数组
                      );
     //$data = http_build_query($data, "", "&");//再將轉成變數=Value&變數=Value
 
