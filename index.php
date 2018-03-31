@@ -2,12 +2,11 @@
 //example,
 //post數據= "username=" & 帳號 & "&password=" & 密碼 & "&qeustions........"
 //url = XXXXXXX?key=value&key=value
-$post_safety = $_POST['safety'];
+$post_safety = $_POST['safe'];
 $post_token = $_POST['token'];
-$post_char = $_POST['char'];
-$post_backwork = $_POST['backwork'];
-$post_manname = $_POST['manname'];
-$post_mess = $post_char . "\r\n" . $post_manname . "\r\n" . $post_safety . "\r\n" . $post_backwork;
+$post_backwork = $_POST['work'];
+$post_manname = $_POST['name'];
+$post_mess = $post_manname . "\r\n" . $post_safety . "\r\n" . $post_backwork;
 define('LINE_API_URL'  ,"https://notify-api.line.me/api/notify");
 //define('LINE_API_TOKEN','Zv3KWsygHysC16wv9igBc7JB0UgyU2hpX9sZsDYS9FT');
 define('API_TOKEN', $post_token);
