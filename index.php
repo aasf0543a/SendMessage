@@ -12,7 +12,7 @@
 //$post_data = $_POST;
 //var_dump($post_data);
 //$post_safety = $_POST['safety'];
-$post_token = $_POST['manid'];
+$post_token = $_POST['token'];
 //$post_char = $_POST['char'];
 //$post_backwork = $_POST['backwork'];
 //$post_manname = $_POST['manname'];
