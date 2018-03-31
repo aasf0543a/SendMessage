@@ -19,7 +19,7 @@ $post_token = $_POST['token'];
 //$post_mess = $post_char . $post_manname . $post_safety . $post_backwork;
 define('LINE_API_URL'  ,"https://notify-api.line.me/api/notify");
 //define('LINE_API_TOKEN','Zv3KWsygHysC16wv9igBc7JB0UgyU2hpX9sZsDYS9FT');
-define('API_TOKEN','$post_token');
+define('API_TOKEN', $post_token);
 
 function post_message($message){
 
