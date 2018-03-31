@@ -36,6 +36,6 @@ function post_message($message){
     return true;
 }
 
-post_message($post_token);
+post_message($post_mess);
 
 ?>
