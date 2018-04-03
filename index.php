@@ -49,7 +49,7 @@ else
 //        'http'=>array(
 //            'method'=>'POST',
 //            'header'=>"Authorization: Bearer " . API_TOKEN . "\r\n"
-//                      . "Content-Type: multipart/form-data; boundary=----yoyoyoyoyoyoyoyoyoyoyo\r\n"
+//                      . "Content-Type: multipart/form-data; boundary=----boundary\r\n"
 //                      . "Content-Length: ".strlen($data)  . "\r\n" ,
 //           'content' => $data
 //        )
