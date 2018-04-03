@@ -38,7 +38,7 @@ else
 //}
 //
 //////////////////////////////////////////////////////////////////////////////
-//function SendImage()
+//function SendImage($message)
 //{
 //  $data = array(
 //                      "message" => $message//先將message轉成索引数组
