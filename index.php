@@ -4,6 +4,7 @@
 //url = XXXXXXX?key=value&key=value
 /////////////////////////////////////////////////////////////
 $post_token = $_POST['token'];
+/////////////////////////////////////////////////////////////
 $post_manname = $_POST['name'];
 $post_safety = $_POST['safe'];
 $post_backwork = $_POST['work'];
@@ -14,9 +15,9 @@ define('API_TOKEN', $post_token);
 ////////////////////////////////////////////////////////////
 if(isset($_Post['token']) && (isset($_Post['image']))
 {
-  $Token = $_Post['token'];
+  $post_token = $_Post['token'];
   $jpg = base64_To_jpeg($_Post['image'], 'test_png');
-  SendImage($Token, $jpg);
+  SendImage($post_token, $jpg);
 }
 else
 {
