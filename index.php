@@ -50,7 +50,10 @@ function SendImage($message)
             'header'=>"Authorization: Bearer " . API_TOKEN . "\r\n"
                       . "Content-Type: multipart/form-data; boundary=----boundary\r\n"
                       . "Content-Length: ".strlen($data)  . "\r\n" ,
-           'content' => $data
+           'Content-Disposition'=> 'form-data',
+           'name'=>'file', 
+           'filename'=>$data
+          
         )
     );
     $context = stream_context_create($options);
