@@ -14,11 +14,11 @@ define('API_TOKEN', $post_token);
 //define('LINE_API_TOKEN','Zv3KWsygHysC16wv9igBc7JB0UgyU2hpX9sZsDYS9FT');
 ////////////////////////////////////////////////////////////
 if(isset($_Post['token']) && (isset($_Post['image']))
-{
+   {
   $post_token = $_Post['token'];
   $jpg = base64_To_jpeg($_Post['image'], 'test_png');
   SendImage($jpg);
-}
+   }
 else
 {
     post_message($post_mess);
