@@ -17,43 +17,50 @@ if(isset($_Post['token']) && (isset($_Post['image']))
 {
   $post_token = $_Post['token'];
   $jpg = base64_To_jpeg($_Post['image'], 'test_png');
-  SendImage($post_token, $jpg);
+  SendImage($jpg);
 }
 else
 {
     post_message($post_mess);
 }
 ////////////////////////////////////////////////////////////
-//function base64_To_jpeg($base64_string,$output_file)
-//{
-//  if(empty($base64_string))
-//  {
-//      return 0;
-//  }
-//  $base64_string = str_replace('','+',base64_string);
-//  $base64_string = base64_decode($base64_string);
-//  $filename = 'tmp/' . $output_file;
-//  $jpg = imagecreatfrompng($filename);
-//  return $jpg;
-//}
-//
+function base64_To_jpeg($base64_string,$output_file)
+{
+  if(empty($base64_string))
+  {
+      return 0;
+  }
+  $base64_string = str_replace('','+',base64_string);
+  $base64_string = base64_decode($base64_string);
+  $filename = 'tmp/' . $output_file;
+  $jpg = imagecreatfrompng($filename);
+  return $jpg;
+}
 //////////////////////////////////////////////////////////////////////////////
-//function SendImage($message)
-//{
-//  $data = array(
-//                      "message" => $message//先將message轉成索引数组
-//                    );
-//  $data = http_build_query($data, "", "&");//再將轉成變數=Value&變數=Value
-//
-//  $options = array(
-//        'http'=>array(
-//            'method'=>'POST',
-//            'header'=>"Authorization: Bearer " . API_TOKEN . "\r\n"
-//                      . "Content-Type: multipart/form-data; boundary=----boundary\r\n"
-//                      . "Content-Length: ".strlen($data)  . "\r\n" ,
-//           'content' => $data
-//        )
-//    );
+function SendImage($message)
+{
+  $data = array(
+                      "message" => $message//先將message轉成索引数组
+                    );
+  $data = http_build_query($data, "", "&");//再將轉成變數=Value&變數=Value
+
+  $options = array(
+        'http'=>array(
+            'method'=>'POST',
+            'header'=>"Authorization: Bearer " . API_TOKEN . "\r\n"
+                      . "Content-Type: multipart/form-data; boundary=----boundary\r\n"
+                      . "Content-Length: ".strlen($data)  . "\r\n" ,
+           'content' => $data
+        )
+    );
+    $context = stream_context_create($options);
+    $resultJson = file_get_contents(LINE_API_URL,FALSE,$context );
+    $resutlArray = json_decode($resultJson,TRUE);
+    if( $resutlArray['status'] != 200)  {
+        return false;
+    }
+    return true;
+}
 //////////////////////////////////////////////////////////////////////////////
 function post_message($message){
 
@@ -71,9 +78,9 @@ function post_message($message){
             'content' => $data
         )
     );
-    $context = stream_context_create($options);
-    $resultJson = file_get_contents(LINE_API_URL,FALSE,$context );
-    $resutlArray = json_decode($resultJson,TRUE);
+    $context = stream_context_create($options);//模擬POST/GET請求的方法
+    $resultJson = file_get_contents(LINE_API_URL,FALSE,$context );//函数把整个文件读入一个字符串中
+    $resutlArray = json_decode($resultJson,TRUE);//接受一個JSON格式的字符串並且把它轉換為PHP變量
     if( $resutlArray['status'] != 200)  {
         return false;
     }
